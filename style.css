@@ -1,3 +1,8 @@
+/* ============================================
+   AGRO FORTE - Estilos Completos
+   Tema: Verde Escuro + Dourado/Trigo
+   ============================================ */
+
 /* Configurações Globais */
 * {
     margin: 0;
@@ -12,6 +17,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Tipografia */
 h1, h2, .logo {
     font-family: 'Montserrat', sans-serif;
 }
@@ -25,18 +31,23 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .logo span {
@@ -46,11 +57,190 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 8px;
 }
 
 nav ul li a {
-    color: #fff
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #c5a059;
+    background-color: rgba(197, 160, 89, 0.12);
+}
+
+nav ul li a.btn-contato {
+    background-color: #c5a059;
+    color: #1b3022 !important;
+    font-weight: 600;
+}
+
+nav ul li a.btn-contato:hover {
+    background-color: #fff;
+    color: #1b3022 !important;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(27, 48, 34, 0.88), rgba(27, 48, 34, 0.92)), 
+                url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: #c5a059;
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.95;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: #c5a059;
+    color: #1b3022;
+    padding: 1rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+}
+
+.btn-main:hover {
+    background-color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
+}
+
+/* Seção de Serviços */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #1b3022;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #c5a059;
+    border-radius: 2px;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.2rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2.8rem 2.2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #1b3022;
+    font-size: 1.65rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background-color: #1b3022;
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
+        gap: 4px;
+    }
+    
+    nav ul li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .grid-servicos {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2.1rem;
+    }
+}
